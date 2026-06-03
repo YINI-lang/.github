@@ -77,7 +77,11 @@ file = "./app.log"
 
 ## Project status
 
-The spec is in release candidate state and the core parsers are being validated against a shared test suite. Feedback, bug reports, and careful review are very welcome before 1.0.0 is finalised.
+## Project status
+
+The YINI specification is currently in release candidate state. The core parser implementations are being validated against a shared test suite before the first stable `1.0.0` release.
+
+Feedback, bug reports, parser comparisons, and careful review are very welcome.
 
 ## Goals and design choices
 
