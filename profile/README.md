@@ -77,11 +77,7 @@ file = "./app.log"
 
 ## Project status
 
-YINI is currently in active development.
-
-The language specification is approaching its first stable `1.0.0` release, and parser implementations are being developed and tested against a shared test suite.
-
-The project is still young, so feedback, bug reports, and careful review are very welcome.
+The spec is in release candidate state and the core parsers are being validated against a shared test suite. Feedback, bug reports, and careful review are very welcome before 1.0.0 is finalised.
 
 ## Goals and design choices
 
@@ -115,10 +111,12 @@ The easiest way to understand YINI is to look at a small configuration file and 
 
 You can try YINI through:
 
-* The TypeScript / Node.js parser.
-* The Python parser.
-* The command-line tools.
-* Small demo applications.
+* The [TypeScript / Node.js](https://yini-lang.org/tools/yini-parser-ts/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme) parser.
+* The [Python](https://yini-lang.org/tools/yini-parser-python/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme) parser.
+* The [command-line](https://yini-lang.org/tools/yini-cli/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme) tool.
+* [Small demo app](https://github.com/YINI-lang/yini-demo-apps) examples using YINI.
+* [Third-party and other YINI tools](https://github.com/YINI-lang/YINI-spec/wiki/Get-YINI-Tools).
+* Or jump to [Getting Started](https://yini-lang.org/use-yini/get-started/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme) guide on the YINI website.
 
 Documentation and examples are available at:
 
@@ -147,8 +145,14 @@ The format favors explicit structure over hidden behavior, readability over clev
 
 ---
 
+## License
+
+Released under MIT or Apache License 2.0 depending on the exact repository.
+
+---
+
 **^YINI ≡**
 
 > A clear, structured, human-friendly configuration format.
 
-[yini-lang.org](https://yini-lang.org/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme_footer) · [YINI on GitHub](https://github.com/YINI-lang)
+[yini-lang.org](https://yini-lang.org/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme_footer)
