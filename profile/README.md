@@ -1,6 +1,6 @@
 # YINI-lang
 
-**YINI** is a human-readable, INI-inspired configuration format with clear nested sections, explicit structure, and predictable parsing.
+**YINI** is an INI-inspired, indentation-insensitive configuration format with clear nested sections, explicit structure, and predictable parsing.
 
 It is designed for configuration files that should be easy to read, easy to write, and straightforward for parsers and tools to process.
 
