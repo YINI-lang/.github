@@ -4,19 +4,60 @@
 
 It is designed for configuration files that should be easy to read, easy to write, and straightforward for parsers and tools to process.
 
-```yini
+**In simple terms:** YINI is a file format for storing application settings, similar in purpose to INI, JSON, YAML, or TOML configuration files. It is meant for settings such as app names, ports, feature flags, paths, database options, and tool configuration — but with a syntax that aims to stay readable, explicit, and predictable.
+
+```ini
 @yini
 
-^ App
-name = "Demo App"
+^ Application
+name = 'Demo Application'
+version = '1.0.0'
+debug = yes
+
+^^ Server
+host = 'localhost'
+port = 8080
+```
+
+This represents the same kind of configuration data as this JSON:
+
+```json
+{
+  "Application": {
+    "name": "Demo Application",
+    "version": "1.0.0",
+    "debug": false,
+    "Server": {
+      "host": "localhost",
+      "port": 8080
+    }
+  }
+}
+```
+
+Or this YAML:
+
+```yaml
+Application:
+  name: Demo Application
+  version: "1.0.0"
+  debug: false
+  Server:
+    host: localhost
+    port: 8080
+```
+
+Or this TOML:
+
+```toml
+[Application]
+name = "Demo Application"
 version = "1.0.0"
 debug = false
 
-^^ Server
+[Application.Server]
 host = "localhost"
 port = 8080
-
-/END
 ```
 
 ## Project status
@@ -25,18 +66,19 @@ YINI is currently in active development.
 
 The language specification is approaching its first stable `1.0.0` release, and parser implementations are being developed and tested against a shared test suite.
 
-The project is still young, so feedback, bug reports, parser comparisons, and careful review are very welcome.
+The project is still young, so feedback, bug reports, and careful review are very welcome.
 
-## Goals
+## Goals and design choices
 
 YINI focuses on:
 
-* Clear and readable configuration files.
-* Explicit nested sections.
-* Predictable parsing rules.
-* Minimal syntax surprises.
-* Human-friendly and parser-friendly structure.
-* Practical use in real applications and tools.
+* **Clear and readable configuration files** — with `key = value` assignments, similar to classic INI files.
+* **Explicit nested sections** — with repeated section markers, similar in spirit to Markdown headings.
+* **Indentation-insensitive structure** — indentation is optional and may be used for readability, but does not define nesting.
+* **Predictable parsing rules** — the same input should produce the same structure across implementations.
+* **Minimal syntax surprises** — YINI prefers explicit rules over implicit rules or magic.
+* **Human-friendly and parser-friendly structure** — files should be readable for people and straightforward for tools to process.
+* **Practical use in real applications and tools** — YINI is intended for application settings, CLI tools, service configuration, and project metadata.
 
 YINI is not intended to be clever or magical. The goal is a small, understandable configuration format with enough structure for serious use.
 
@@ -50,16 +92,18 @@ YINI is not intended to be clever or magical. The goal is a small, understandabl
 * **[syntax-highlighting](https://github.com/YINI-lang/syntax-highlighting)** — syntax highlighting definitions for editors that support TextMate grammars.
 * **[yini-homepage](https://github.com/YINI-lang/yini-homepage)** — homepage and documentation site for YINI.
 
-The shared parser test suite, **yini-test**, is currently private while it is being prepared.
+The shared parser test suite, **yini-test**, is currently private while it is being prepared for public use.
 
 ## Try YINI
 
-You can try YINI through the parser packages and examples:
+The easiest way to understand YINI is to look at a small configuration file and parse it with one of the available tools.
 
-* TypeScript / Node.js parser.
-* Python parser.
-* CLI tools.
-* Demo applications.
+You can try YINI through:
+
+* The TypeScript / Node.js parser.
+* The Python parser.
+* The command-line tools.
+* Small demo applications.
 
 Documentation and examples are available at:
 
