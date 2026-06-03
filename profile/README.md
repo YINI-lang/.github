@@ -17,21 +17,29 @@ debug = yes
 ^^ Server
 host = 'localhost'
 port = 8080
+
+^^^ Logging
+level = 'info'
+file = './app.log'
 ```
 
 This represents the same kind of configuration data as this JSON:
 
 ```json
 {
-  "Application": {
-    "name": "Demo Application",
-    "version": "1.0.0",
-    "debug": false,
-    "Server": {
-      "host": "localhost",
-      "port": 8080
+    "Application": {
+        "name": "Demo Application",
+        "version": "1.0.0",
+        "debug": true,
+        "Server": {
+            "host": "localhost",
+            "port": 8080,
+            "Logging": {
+                "level": "info",
+                "file": "./app.log"
+            }
+        }
     }
-  }
 }
 ```
 
@@ -39,12 +47,15 @@ Or this YAML:
 
 ```yaml
 Application:
-  name: Demo Application
-  version: "1.0.0"
-  debug: false
-  Server:
-    host: localhost
-    port: 8080
+    name: Demo Application
+    version: "1.0.0"
+    debug: true
+    Server:
+        host: localhost
+        port: 8080
+        Logging:
+            level: info
+            file: ./app.log
 ```
 
 Or this TOML:
@@ -53,11 +64,15 @@ Or this TOML:
 [Application]
 name = "Demo Application"
 version = "1.0.0"
-debug = false
+debug = true
 
 [Application.Server]
 host = "localhost"
 port = 8080
+
+[Application.Server.Logging]
+level = "info"
+file = "./app.log"
 ```
 
 ## Project status
