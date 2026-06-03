@@ -77,8 +77,6 @@ file = "./app.log"
 
 ## Project status
 
-## Project status
-
 The YINI specification is currently in release candidate state. The core parser implementations are being validated against a shared test suite before the first stable `1.0.0` release.
 
 Feedback, bug reports, parser comparisons, and careful review are very welcome.
@@ -118,9 +116,9 @@ You can try YINI through:
 * The [TypeScript / Node.js](https://yini-lang.org/tools/yini-parser-ts/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme) parser.
 * The [Python](https://yini-lang.org/tools/yini-parser-python/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme) parser.
 * The [command-line](https://yini-lang.org/tools/yini-cli/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme) tool.
-* [Small demo app](https://github.com/YINI-lang/yini-demo-apps) examples using YINI.
+* [Small demo apps](https://github.com/YINI-lang/yini-demo-apps) using YINI.
 * [Third-party and other YINI tools](https://github.com/YINI-lang/YINI-spec/wiki/Get-YINI-Tools).
-* Or jump to [Getting Started](https://yini-lang.org/use-yini/get-started/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme) guide on the YINI website.
+* Or jump to the [Getting Started](https://yini-lang.org/use-yini/get-started/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme) guide on the YINI website.
 
 Documentation and examples are available at:
 
@@ -138,6 +136,8 @@ Contributions are welcome, especially:
 * Review of edge cases before `1.0.0`.
 
 If you notice something unclear, surprising, inconsistent, or difficult to implement, please open an issue or discussion.
+
+YINI is a young project, so early feedback and real-world testing are especially valuable.
 
 ## Philosophy
 
