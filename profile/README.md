@@ -63,7 +63,7 @@ You can try YINI through the parser packages and examples:
 
 Documentation and examples are available at:
 
-[yini-lang.org](https://yini-lang.org)
+[yini-lang.org](https://yini-lang.org/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme)
 
 ## Contributing
 
