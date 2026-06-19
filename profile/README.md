@@ -102,10 +102,9 @@ YINI is not intended to be clever or magical. The goal is a small, understandabl
 * **[yini-parser-python](https://github.com/YINI-lang/yini-parser-python)** — official Python parser implementation.
 * **[yini-cli](https://github.com/YINI-lang/yini-cli)** — command-line tooling for validating and working with YINI files.
 * **[yini-demo-apps](https://github.com/YINI-lang/yini-demo-apps)** — small demo applications showing how YINI can be used in real projects.
+* **[yini-test](https://github.com/YINI-lang/yini-test)** — shared parser test suite for validating YINI implementations.
 * **[syntax-highlighting](https://github.com/YINI-lang/syntax-highlighting)** — syntax highlighting definitions for editors that support TextMate grammars.
 * **[yini-homepage](https://github.com/YINI-lang/yini-homepage)** — homepage and documentation site for YINI.
-
-The shared parser test suite, **yini-test**, is currently private while it is being prepared for public use.
 
 ## Try YINI
 
