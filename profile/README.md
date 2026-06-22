@@ -75,6 +75,25 @@ level = "info"
 file = "./app.log"
 ```
 
+## Why does YINI exist?
+
+Many existing configuration formats are useful, but each comes with trade-offs:
+
+* **INI** is simple, but often too flat.
+  > **YINI keeps `key = value`, but adds nested sections.**
+* **JSON** is explicit, but punctuation-heavy to edit by hand.
+  > **YINI keeps structured values with less required punctuation.**
+* **YAML** is flexible, but indentation can affect meaning.
+  > **YINI uses section markers instead of whitespace to define structure.**
+* **XML** is structured, but verbose for configuration.
+  > **YINI supports hierarchy without opening and closing tags.**
+* **TOML** is configuration-oriented, but deeply nested tables can become harder to scan.
+  > **YINI makes nesting visible through repeated section markers.**
+
+YINI is designed as a practical middle ground: familiar `key = value` configuration with explicit nested sections, useful data types, indentation-insensitive structure, and predictable parsing rules.
+
+The goal is not to replace every configuration format. YINI is intentionally JSON-friendly: JSON remains a strong choice for data exchange, APIs, generated output, and many existing tools. YINI focuses on human-authored configuration, and `yini-cli` can convert YINI files to JSON when JSON is the better format for the next step.
+
 ## Project status
 
 The YINI specification is currently in release candidate state. The core parser implementations are being validated against a shared test suite before the first stable `1.0.0` release.
@@ -98,11 +117,11 @@ YINI is not intended to be clever or magical. The goal is a small, understandabl
 ## Main repositories
 
 * **[YINI-spec](https://github.com/YINI-lang/YINI-spec)** — the YINI language specification and grammar.
+* **[yini-test](https://github.com/YINI-lang/yini-test)** — shared parser test suite for validating YINI parser implementations.
 * **[yini-parser-typescript](https://github.com/YINI-lang/yini-parser-typescript)** — official Node.js / TypeScript parser implementation.
 * **[yini-parser-python](https://github.com/YINI-lang/yini-parser-python)** — official Python parser implementation.
 * **[yini-cli](https://github.com/YINI-lang/yini-cli)** — command-line tooling for validating and working with YINI files.
 * **[yini-demo-apps](https://github.com/YINI-lang/yini-demo-apps)** — small demo applications showing how YINI can be used in real projects.
-* **[yini-test](https://github.com/YINI-lang/yini-test)** — shared parser test suite for validating YINI implementations.
 * **[syntax-highlighting](https://github.com/YINI-lang/syntax-highlighting)** — syntax highlighting definitions for editors that support TextMate grammars.
 * **[yini-homepage](https://github.com/YINI-lang/yini-homepage)** — homepage and documentation site for YINI.
 
