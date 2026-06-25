@@ -38,11 +38,11 @@ npm install yini-parser
 Parse your first YINI file:
 
 ```bash
-# Python
-python -c "from yini_parser import load; print(load('config.yini'))"
-
 # Command-line tool
 npx yini-cli parse config.yini
+
+# Python
+python -c "from yini_parser import load; print(load('config.yini'))"
 ```
 
 Or jump to the [Getting Started](https://yini-lang.org/use-yini/get-started/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme_try) guide.
