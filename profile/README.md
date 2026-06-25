@@ -4,6 +4,8 @@
 
 It is designed for configuration files that should be easy to read, easy to write, and straightforward for parsers and tools to process.
 
+> Configuration should be clear to humans and predictable for tools.
+
 **In simple terms:** YINI is a file format for storing application settings, similar in purpose to INI, JSON, YAML, or TOML configuration files. It is meant for settings such as app names, ports, feature flags, paths, database options, and tool configuration — but with a syntax that aims to stay readable, explicit, and predictable.
 
 ```ini
@@ -23,7 +25,31 @@ level = 'info'
 file = './app.log'
 ```
 
-This represents the same kind of configuration data as this JSON:
+## Try it now
+
+```bash
+# Python parser
+pip install yini-parser
+
+# Node.js / TypeScript parser
+npm install yini-parser
+```
+
+Parse your first YINI file:
+
+```bash
+# Python
+python -c "from yini_parser import load; print(load('config.yini'))"
+
+# Command-line tool
+npx yini-cli parse config.yini
+```
+
+Or jump to the [Getting Started](https://yini-lang.org/use-yini/get-started/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme_try) guide.
+
+---
+
+The above YINI represents the same kind of configuration data as this JSON:
 
 ```json
 {
@@ -92,13 +118,26 @@ Many existing configuration formats are useful, but each comes with trade-offs:
 
 YINI is designed as a practical middle ground: familiar `key = value` configuration with explicit nested sections, useful data types, indentation-insensitive structure, and predictable parsing rules.
 
-The goal is not to replace every configuration format. YINI is intentionally JSON-friendly: JSON remains a strong choice for data exchange, APIs, generated output, and many existing tools. YINI focuses on human-authored configuration, and `yini-cli` can convert YINI files to JSON when JSON is the better format for the next step.
+> The goal is not to replace every configuration format.
+
+YINI is intentionally JSON-friendly: JSON remains a strong choice for data exchange, APIs, generated output, and many existing tools. YINI focuses on human-authored configuration, and `yini-cli` can convert YINI files to JSON when JSON is the better format for the next step.
+
+## Who is YINI for?
+
+YINI may be a good fit for:
+
+- Developers building greenfield projects, internal tools, CLIs, services, or applications where they control the configuration stack.
+- Projects that want human-edited configuration with comments, useful data types, and clear nested structure.
+- Teams that like `key = value` simplicity, but need more structure than flat INI-style files.
+- Tool authors and contributors interested in parsers, validation, test cases, examples, or documentation.
+
+YINI is still an early-stage project, so it is best suited for experimentation, controlled projects, and internal tooling. Early adopters who are comfortable giving feedback are especially welcome — some tools are still in beta, and the 1.0.0 final release is not yet out.
 
 ## Project status
 
-The YINI specification is currently in release candidate state. The core parser implementations are being validated against a shared test suite before the first stable `1.0.0` release.
+The YINI specification is currently in release candidate state 6. The core parser implementations are being validated against a shared test suite before the first stable `1.0.0` release.
 
-Feedback, bug reports, parser comparisons, and careful review are very welcome.
+Feedback, bug reports, parser comparisons, suggestions, and reviews are very welcome.
 
 ## Goals and design choices
 
@@ -125,7 +164,7 @@ YINI is not intended to be clever or magical. The goal is a small, understandabl
 * **[syntax-highlighting](https://github.com/YINI-lang/syntax-highlighting)** — syntax highlighting definitions for editors that support TextMate grammars.
 * **[yini-homepage](https://github.com/YINI-lang/yini-homepage)** — homepage and documentation site for YINI.
 
-## Try YINI
+## More ways to explore YINI
 
 The easiest way to understand YINI is to look at a small configuration file and parse it with one of the available tools.
 
@@ -155,7 +194,7 @@ Contributions are welcome, especially:
 
 If you notice something unclear, surprising, inconsistent, or difficult to implement, please open an issue or discussion.
 
-YINI is a young project, so early feedback and real-world testing are especially valuable.
+YINI is a early-stage project, so early feedback and real-world testing are especially valuable.
 
 ## Philosophy
 
@@ -169,11 +208,22 @@ The format favors explicit structure over hidden behavior, readability over clev
 
 ## License
 
-Released under MIT or Apache License 2.0 depending on the exact repository.
+Released under **MIT** or **Apache License 2.0** depending on the exact repository.
+
+YINI repositories are released under the license shown in each repository:
+
+| Repository             | License |
+|------------------------|---------|
+| YINI-spec              | Apache License 2.0 |
+| yini-test              | Apache License 2.0 |
+| yini-parser-typescript | Apache License 2.0 |
+| yini-parser-python     | Apache License 2.0 |
+| yini-cli               | Apache License 2.0 |
+| yini-demo-apps         | MIT License |
+| syntax-highlighting    | MIT License |
+| yini-homepage          | MIT License |
 
 ---
-
-**^YINI ≡**
 
 > A clear, structured, human-friendly configuration format.
 
