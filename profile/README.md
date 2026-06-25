@@ -12,9 +12,9 @@ It is designed for configuration files that should be easy to read, easy to writ
 @yini
 
 ^ Application
-name = 'Demo Application'
+name    = 'Demo Application'
 version = '1.0.0'
-debug = yes
+debug   = yes
 
 ^^ Server
 host = 'localhost'
@@ -22,7 +22,7 @@ port = 8080
 
 ^^^ Logging
 level = 'info'
-file = './app.log'
+file  = './app.log'
 ```
 
 ## Try it now
