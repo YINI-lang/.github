@@ -14,7 +14,7 @@ It is designed for configuration files that should be easy to read, easy to writ
 ^ Application
 name    = 'Demo Application'
 version = '1.0.0'
-debug   = YES  // true works too
+debug   = YES              // true works too
 
 ^^ Server
 host = 'localhost'
