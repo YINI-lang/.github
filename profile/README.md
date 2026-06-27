@@ -156,7 +156,7 @@ YINI is not intended to be clever or magical. The goal is a small, understandabl
 ## Main repositories
 
 * **[YINI-spec](https://github.com/YINI-lang/YINI-spec)** — the YINI language specification and grammar.
-* **[yini-test](https://github.com/YINI-lang/yini-test)** — shared parser test suite for validating YINI parser implementations.
+* **[yini-test-suite](https://github.com/YINI-lang/yini-test-suite)** — shared parser test suite for validating YINI parser implementations.
 * **[yini-parser-typescript](https://github.com/YINI-lang/yini-parser-typescript)** — official Node.js / TypeScript parser implementation.
 * **[yini-parser-python](https://github.com/YINI-lang/yini-parser-python)** — official Python parser implementation.
 * **[yini-cli](https://github.com/YINI-lang/yini-cli)** — command-line tooling for validating and working with YINI files.
@@ -215,7 +215,7 @@ YINI repositories are released under the license shown in each repository:
 | Repository             | License |
 |------------------------|---------|
 | YINI-spec              | Apache License 2.0 |
-| yini-test              | Apache License 2.0 |
+| yini-test-suite        | Apache License 2.0 |
 | yini-parser-typescript | Apache License 2.0 |
 | yini-parser-python     | Apache License 2.0 |
 | yini-cli               | Apache License 2.0 |
