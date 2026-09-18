@@ -194,7 +194,7 @@ Contributions are welcome, especially:
 
 If you notice something unclear, surprising, inconsistent, or difficult to implement, please open an issue or discussion.
 
-YINI is a early-stage project, so early feedback and real-world testing are especially valuable.
+YINI is an early-stage project, so early feedback and real-world testing are especially valuable.
 
 ## Philosophy
 
