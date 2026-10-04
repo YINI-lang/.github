@@ -25,6 +25,8 @@ level = 'info'
 file  = './app.log'
 ```
 
+Each section header starts with `^`; repeating it sets the nesting level (`^` is top-level, `^^` is a child, and `^^^` is a grandchild). Indentation is optional and does not affect the structure.
+
 ## Try it now
 
 ```bash
