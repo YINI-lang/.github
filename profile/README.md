@@ -29,25 +29,36 @@ Each section header starts with `^`; repeating it sets the nesting level (`^` is
 
 ## Try it now
 
-```bash
-# Python parser
-pip install yini-parser
+Save the YINI example above as `config.yini`, then choose one option below.
 
-# Node.js / TypeScript parser
-npm install yini-parser
+### Command line
+
+Requires Node.js. Parse the file and print the result as JSON:
+
+```bash
+npx yini-cli parse config.yini
 ```
 
-Parse your first YINI file:
+### Python
+
+Install the Python parser, then parse the file:
 
 ```bash
-# Command-line tool
-npx yini-cli parse config.yini
-
-# Python
+pip install yini-parser
 python -c "from yini_parser import load; print(load('config.yini'))"
 ```
 
-Or jump to the [Getting Started](https://yini-lang.org/use-yini/get-started/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme_try) guide.
+### Node.js / TypeScript
+
+To use YINI in your application, install the Node.js / TypeScript parser:
+
+```bash
+npm install yini-parser
+```
+
+See the [parser documentation](https://yini-lang.org/tools/yini-parser-ts/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme) for usage examples.
+
+For a walkthrough, see the [Getting Started](https://yini-lang.org/use-yini/get-started/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme_try) guide.
 
 ---
 
@@ -70,6 +81,9 @@ The above YINI represents the same kind of configuration data as this JSON:
     }
 }
 ```
+
+<details>
+<summary>See comparisons with YAML, TOML, XML, and INI</summary>
 
 Or this YAML:
 
@@ -103,17 +117,58 @@ level = "info"
 file = "./app.log"
 ```
 
+Or this XML:
+
+```xml
+<Application>
+    <name>Demo Application</name>
+    <version>1.0.0</version>
+    <debug>true</debug>
+    <Server>
+        <host>localhost</host>
+        <port>8080</port>
+        <Logging>
+            <level>info</level>
+            <file>./app.log</file>
+        </Logging>
+    </Server>
+</Application>
+```
+
+In XML, the consuming application or schema defines how text values such as `true` and `8080` are interpreted.
+
+Or this INI:
+
+```ini
+[Application]
+name = Demo Application
+version = 1.0.0
+debug = true
+
+[Application.Server]
+host = localhost
+port = 8080
+
+[Application.Server.Logging]
+level = info
+file = ./app.log
+```
+
+In this INI example, dotted section names are a naming convention rather than built-in nesting. The consuming application determines how to interpret the section names and convert text values to numbers or booleans.
+
+</details>
+
 ## Why does YINI exist?
 
 Many existing configuration formats are useful, but each comes with trade-offs:
 
-* **INI** is simple, but often too flat.
+* **[INI](https://en.wikipedia.org/wiki/INI_file)** is simple, but often too flat.
   > **YINI keeps `key = value`, but adds nested sections.**
-* **JSON** is explicit, but punctuation-heavy to edit by hand.
+* **[JSON](https://www.json.org)** is explicit, but punctuation-heavy to edit by hand.
   > **YINI keeps structured values with less required punctuation.**
 * **YAML** is flexible, but indentation can affect meaning.
   > **YINI uses section markers instead of whitespace to define structure.**
-* **XML** is structured, but verbose for configuration.
+* **[XML](https://www.w3.org/TR/xml/)** is structured, but verbose for configuration.
   > **YINI supports hierarchy without opening and closing tags.**
 * **TOML** is configuration-oriented, but deeply nested tables can become harder to scan.
   > **YINI makes nesting visible through repeated section markers.**
@@ -122,7 +177,9 @@ YINI is designed as a practical middle ground: familiar `key = value` configurat
 
 > The goal is not to replace every configuration format.
 
-YINI is intentionally JSON-friendly: JSON remains a strong choice for data exchange, APIs, generated output, and many existing tools. YINI focuses on human-authored configuration, and `yini-cli` can convert YINI files to JSON when JSON is the better format for the next step.
+YINI focuses on human-authored configuration. Its tooling and ecosystem are still developing, and established formats may be a better fit when existing systems, integrations, or tooling require them.
+
+JSON remains a strong choice for data exchange, APIs, generated output, and interoperability. YINI tools also use JSON where appropriate: for example, `yini-cli` prints parsed configuration as JSON by default and can write the result to a JSON file.
 
 ## Who is YINI for?
 
@@ -137,7 +194,7 @@ YINI is still an early-stage project, so it is best suited for experimentation, 
 
 ## Project status
 
-The YINI specification is currently in release candidate state 6. The core parser implementations are being validated against a shared test suite before the first stable `1.0.0` release.
+The YINI specification is at `1.0.0-RC.6` (release candidate 6). The core parser implementations are being validated against a shared test suite before the first stable `1.0.0` release.
 
 Feedback, bug reports, parser comparisons, suggestions, and reviews are very welcome.
 
@@ -210,9 +267,9 @@ The format favors explicit structure over hidden behavior, readability over clev
 
 ## License
 
-Released under **MIT** or **Apache License 2.0** depending on the exact repository.
+Licenses vary by repository. See each repository’s `LICENSE` file for the applicable terms.
 
-YINI repositories are released under the license shown in each repository:
+The main repositories use the following licenses:
 
 | Repository             | License |
 |------------------------|---------|
