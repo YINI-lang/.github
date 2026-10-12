@@ -218,6 +218,7 @@ YINI is not intended to be clever or magical. The goal is a small, understandabl
 * **[yini-test-suite](https://github.com/YINI-lang/yini-test-suite)** — shared parser test suite for validating YINI parser implementations.
 * **[yini-parser-typescript](https://github.com/YINI-lang/yini-parser-typescript)** — official Node.js / TypeScript parser implementation.
 * **[yini-parser-python](https://github.com/YINI-lang/yini-parser-python)** — official Python parser implementation.
+* **[yini-parser-go](https://github.com/YINI-lang/yini-parser-go)** — official Go parser implementation (alpha).
 * **[yini-cli](https://github.com/YINI-lang/yini-cli)** — command-line tooling for validating and working with YINI files.
 * **[yini-demo-apps](https://github.com/YINI-lang/yini-demo-apps)** — small demo applications showing how YINI can be used in real projects.
 * **[syntax-highlighting](https://github.com/YINI-lang/syntax-highlighting)** — syntax highlighting definitions for editors that support TextMate grammars.
@@ -231,6 +232,7 @@ You can try YINI through:
 
 * The [TypeScript / Node.js](https://yini-lang.org/tools/yini-parser-ts/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme) parser.
 * The [Python](https://yini-lang.org/tools/yini-parser-python/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme) parser.
+* The [Go](https://github.com/YINI-lang/yini-parser-go) parser (alpha).
 * The [command-line](https://yini-lang.org/tools/yini-cli/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme) tool.
 * [Small demo apps](https://github.com/YINI-lang/yini-demo-apps) using YINI.
 * [Third-party and other YINI tools](https://github.com/YINI-lang/YINI-spec/wiki/Get-YINI-Tools).
@@ -239,6 +241,10 @@ You can try YINI through:
 Documentation and examples are available at:
 
 **Homepage:** [yini-lang.org](https://yini-lang.org/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme)
+
+## Questions and feedback
+
+For questions about YINI syntax, usage, or the project, ask in [YINI-lang Discussions](https://github.com/orgs/YINI-lang/discussions). For a parser or tool bug, open an issue in the relevant repository. For specification errors or ambiguities, open an issue in [YINI-spec](https://github.com/YINI-lang/YINI-spec/issues).
 
 ## Contributing
 
@@ -250,8 +256,6 @@ Contributions are welcome, especially:
 * Documentation improvements.
 * Examples and integrations.
 * Review of edge cases before `1.0.0`.
-
-If you notice something unclear, surprising, inconsistent, or difficult to implement, please open an issue or discussion.
 
 YINI is an early-stage project, so early feedback and real-world testing are especially valuable.
 
@@ -277,6 +281,7 @@ The main repositories use the following licenses:
 | yini-test-suite        | Apache License 2.0 |
 | yini-parser-typescript | Apache License 2.0 |
 | yini-parser-python     | Apache License 2.0 |
+| yini-parser-go         | MIT License |
 | yini-cli               | Apache License 2.0 |
 | yini-demo-apps         | MIT License |
 | syntax-highlighting    | MIT License |
