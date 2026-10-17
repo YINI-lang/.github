@@ -1,12 +1,6 @@
 # YINI-lang
 
-**YINI** is an INI-inspired, indentation-insensitive configuration format with clear nested sections, explicit structure, and predictable parsing.
-
-It is designed for configuration files that should be easy to read, easy to write, and straightforward for parsers and tools to process.
-
-> Configuration should be clear to humans and predictable for tools.
-
-**In simple terms:** YINI is a file format for storing application settings, similar in purpose to INI, JSON, YAML, or TOML configuration files. It is meant for settings such as app names, ports, feature flags, paths, database options, and tool configuration — but with a syntax that aims to stay readable, explicit, and predictable.
+**YINI** is an INI-inspired format for human-edited configuration. It uses familiar `key = value` assignments, supports nested sections and typed values, and does not use indentation to define structure.
 
 ```ini
 @yini
@@ -29,7 +23,7 @@ Each section header starts with `^`; repeating it sets the nesting level (`^` is
 
 ## Try it now
 
-Save the YINI example above as `config.yini`, then choose one option below.
+Try the example in the [YINI Playground](https://yini-lang.org/playground/?utm_source=github&utm_campaign=yini_page&utm_content=readme_try&utm_medium=referral), or save it as `config.yini` and use one of the tools below.
 
 ### Command line
 
@@ -56,13 +50,14 @@ To use YINI in your application, install the Node.js / TypeScript parser:
 npm install yini-parser
 ```
 
-See the [parser documentation](https://yini-lang.org/tools/yini-parser-ts/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme) for usage examples.
+See the [parser documentation](https://yini-lang.org/tools/yini-parser-ts/?utm_source=github&utm_campaign=yini_page&utm_content=readme&utm_medium=referral) for usage examples.
 
-For a walkthrough, see the [Getting Started](https://yini-lang.org/use-yini/get-started/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme_try) guide.
+For a walkthrough, see the [Getting Started](https://yini-lang.org/use-yini/get-started/?utm_source=github&utm_campaign=yini_page&utm_content=readme_try&utm_medium=referral) guide. Go users can start with [yini-parser-go](https://github.com/YINI-lang/yini-parser-go) (alpha).
 
----
+<details>
+<summary>Compare the example with JSON, YAML, TOML, XML, and INI</summary>
 
-The above YINI represents the same kind of configuration data as this JSON:
+The YINI example above represents the same kind of configuration data as this JSON:
 
 ```json
 {
@@ -81,9 +76,6 @@ The above YINI represents the same kind of configuration data as this JSON:
     }
 }
 ```
-
-<details>
-<summary>See comparisons with YAML, TOML, XML, and INI</summary>
 
 Or this YAML:
 
@@ -160,57 +152,15 @@ In this INI example, dotted section names are a naming convention rather than bu
 
 ## Why does YINI exist?
 
-Many existing configuration formats are useful, but each comes with trade-offs:
-
-* **[INI](https://en.wikipedia.org/wiki/INI_file)** is simple, but often too flat.
-  > **YINI keeps `key = value`, but adds nested sections.**
-* **[JSON](https://www.json.org)** is explicit, but punctuation-heavy to edit by hand.
-  > **YINI keeps structured values with less required punctuation.**
-* **YAML** is flexible, but indentation can affect meaning.
-  > **YINI uses section markers instead of whitespace to define structure.**
-* **[XML](https://www.w3.org/TR/xml/)** is structured, but verbose for configuration.
-  > **YINI supports hierarchy without opening and closing tags.**
-* **TOML** is configuration-oriented, but deeply nested tables can become harder to scan.
-  > **YINI makes nesting visible through repeated section markers.**
-
-YINI is designed as a practical middle ground: familiar `key = value` configuration with explicit nested sections, useful data types, indentation-insensitive structure, and predictable parsing rules.
-
-> The goal is not to replace every configuration format.
-
-YINI focuses on human-authored configuration. Its tooling and ecosystem are still developing, and established formats may be a better fit when existing systems, integrations, or tooling require them.
-
-JSON remains a strong choice for data exchange, APIs, generated output, and interoperability. YINI tools also use JSON where appropriate: for example, `yini-cli` prints parsed configuration as JSON by default and can write the result to a JSON file.
+YINI combines INI-style assignments with explicit nesting, comments, and typed values. Its section markers show the structure even when indentation changes. It is intended for configuration people write and review; established formats may fit better when a project already depends on their tooling.
 
 ## Who is YINI for?
 
-YINI may be a good fit for:
-
-- Developers building greenfield projects, internal tools, CLIs, services, or applications where they control the configuration stack.
-- Projects that want human-edited configuration with comments, useful data types, and clear nested structure.
-- Teams that like `key = value` simplicity, but need more structure than flat INI-style files.
-- Tool authors and contributors interested in parsers, validation, test cases, examples, or documentation.
-
-YINI is still an early-stage project, so it is best suited for experimentation, controlled projects, and internal tooling. Early adopters who are comfortable giving feedback are especially welcome — some tools are still in beta, and the 1.0.0 final release is not yet out.
+If you write or maintain configuration that people edit by hand, YINI may be useful to explore for an app, service, or internal tool. If you're comparing formats or building tooling, you're welcome here too. Feel free to try the example, ask a question, or share what you find.
 
 ## Project status
 
-The YINI specification is at `1.0.0-RC.6` (release candidate 6). The core parser implementations are being validated against a shared test suite before the first stable `1.0.0` release.
-
-Feedback, bug reports, parser comparisons, suggestions, and reviews are very welcome.
-
-## Goals and design choices
-
-YINI focuses on:
-
-* **Clear and readable configuration files** — with `key = value` assignments, similar to classic INI files.
-* **Explicit nested sections** — with repeated section markers, similar in spirit to Markdown headings.
-* **Indentation-insensitive structure** — indentation is optional and may be used for readability, but does not define nesting.
-* **Predictable parsing rules** — the same input should produce the same structure across implementations.
-* **Minimal syntax surprises** — YINI prefers explicit rules over implicit rules or magic.
-* **Human-friendly and parser-friendly structure** — files should be readable for people and straightforward for tools to process.
-* **Practical use in real applications and tools** — YINI is intended for application settings, CLI tools, service configuration, and project metadata.
-
-YINI is not intended to be clever or magical. The goal is a small, understandable configuration format with enough structure for serious use.
+The [YINI specification](https://yini-lang.org/refs/specification/) is at `1.0.0-RC.6`; the final `1.0.0` format release is still ahead. The TypeScript parser and CLI are available, the Python parser is in beta, and the Go parser is in alpha. YINI is best suited to experimentation and controlled projects for now. Check each tool's release notes and test it against your needs before adopting it.
 
 ## Main repositories
 
@@ -224,40 +174,15 @@ YINI is not intended to be clever or magical. The goal is a small, understandabl
 * **[syntax-highlighting](https://github.com/YINI-lang/syntax-highlighting)** — syntax highlighting definitions for editors that support TextMate grammars.
 * **[yini-homepage](https://github.com/YINI-lang/yini-homepage)** — homepage and documentation site for YINI.
 
-## More ways to explore YINI
-
-The easiest way to understand YINI is to look at a small configuration file and parse it with one of the available tools.
-
-You can try YINI through:
-
-* The [TypeScript / Node.js](https://yini-lang.org/tools/yini-parser-ts/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme) parser.
-* The [Python](https://yini-lang.org/tools/yini-parser-python/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme) parser.
-* The [Go](https://github.com/YINI-lang/yini-parser-go) parser (alpha).
-* The [command-line](https://yini-lang.org/tools/yini-cli/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme) tool.
-* [Small demo apps](https://github.com/YINI-lang/yini-demo-apps) using YINI.
-* [Third-party and other YINI tools](https://github.com/YINI-lang/YINI-spec/wiki/Get-YINI-Tools).
-* Or jump to the [Getting Started](https://yini-lang.org/use-yini/get-started/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme) guide on the YINI website.
-
-Documentation and examples are available at:
-
-**Homepage:** [yini-lang.org](https://yini-lang.org/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme)
+For documentation and examples, visit [yini-lang.org](https://yini-lang.org/?utm_source=github&utm_campaign=yini_page&utm_content=readme&utm_medium=referral). See also [third-party and other YINI tools](https://github.com/YINI-lang/YINI-spec/wiki/Get-YINI-Tools).
 
 ## Questions and feedback
 
-For questions about YINI syntax, usage, or the project, ask in [YINI-lang Discussions](https://github.com/orgs/YINI-lang/discussions). For a parser or tool bug, open an issue in the relevant repository. For specification errors or ambiguities, open an issue in [YINI-spec](https://github.com/YINI-lang/YINI-spec/issues).
+Questions are welcome. For help with YINI syntax, usage, or the project, start a thread in [YINI-lang Discussions](https://github.com/orgs/YINI-lang/discussions). If you find a parser or tool bug, open an issue in that repository. For specification errors or unclear rules, use [YINI-spec issues](https://github.com/YINI-lang/YINI-spec/issues).
 
 ## Contributing
 
-Contributions are welcome, especially:
-
-* Specification feedback.
-* Parser bug reports.
-* Test cases.
-* Documentation improvements.
-* Examples and integrations.
-* Review of edge cases before `1.0.0`.
-
-YINI is an early-stage project, so early feedback and real-world testing are especially valuable.
+Contributions are welcome, including test cases, documentation fixes, examples, and review of specification edge cases. Start with the relevant repository's README or issues.
 
 ## Philosophy
 
@@ -273,7 +198,8 @@ The format favors explicit structure over hidden behavior, readability over clev
 
 Licenses vary by repository. See each repository’s `LICENSE` file for the applicable terms.
 
-The main repositories use the following licenses:
+<details>
+<summary>Licenses by repository</summary>
 
 | Repository             | License |
 |------------------------|---------|
@@ -287,8 +213,8 @@ The main repositories use the following licenses:
 | syntax-highlighting    | MIT License |
 | yini-homepage          | MIT License |
 
+</details>
+
 ---
 
-> A clear, structured, human-friendly configuration format.
-
-[yini-lang.org](https://yini-lang.org/?utm_source=github&utm_medium=referral&utm_campaign=yini_page&utm_content=readme_footer)
+[yini-lang.org](https://yini-lang.org/?utm_source=github&utm_campaign=yini_page&utm_content=readme_footer&utm_medium=referral)
