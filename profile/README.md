@@ -160,7 +160,7 @@ If you write or maintain configuration that people edit by hand, YINI may be use
 
 ## Project status
 
-The [YINI specification](https://yini-lang.org/refs/specification/) is at `1.0.0-RC.6`; the final `1.0.0` format release is still ahead. The TypeScript parser and CLI are available, the Python parser is in beta, and the Go parser is in alpha. YINI is best suited to experimentation and controlled projects for now. Check each tool's release notes and test it against your needs before adopting it.
+The [YINI specification](https://yini-lang.org/refs/specification/?utm_source=github&utm_campaign=yini_page&utm_content=readme&utm_medium=referral) is at `1.0.0-RC.6`; the final `1.0.0` format release is still ahead. The TypeScript parser and CLI are available, the Python parser is in beta, and the Go parser is in alpha. YINI is best suited to experimentation and controlled projects for now. Check each tool's release notes and test it against your needs before adopting it.
 
 ## Main repositories
 
