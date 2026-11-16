@@ -2,6 +2,8 @@
 
 **YINI** is an INI-inspired format for human-edited configuration. It uses familiar `key = value` assignments, supports nested sections and typed values, and does not use indentation to define structure.
 
+YINI aims to be less verbose than JSON and XML, simpler than YAML, more expressive than INI, and less repetitive than TOML.
+
 ```ini
 @yini
 
@@ -19,7 +21,7 @@ level = 'info'
 file  = './app.log'
 ```
 
-Each section header starts with `^`; repeating it sets the nesting level (`^` is top-level, `^^` is a child, and `^^^` is a grandchild). Indentation is optional and does not affect the structure.
+In this example, section headers use `^`; repeating it sets the nesting level (`^` is top-level, `^^` is a child, and `^^^` is a grandchild). Indentation is optional and does not affect the structure. The example uses lenient mode (the default). Strict mode also requires a final `/END` terminator.
 
 ## Try it now
 
@@ -27,7 +29,7 @@ Try the example in the [YINI Playground](https://yini-lang.org/playground/?utm_s
 
 ### Command line
 
-Requires Node.js. Parse the file and print the result as JSON:
+Requires Node.js 22 or later. Parse the file and print the result as JSON:
 
 ```bash
 npx yini-cli parse config.yini
@@ -35,16 +37,16 @@ npx yini-cli parse config.yini
 
 ### Python
 
-Install the Python parser, then parse the file:
+Requires Python 3.10 or later. Install the Python parser, allowing prerelease versions, then parse the file:
 
 ```bash
-pip install yini-parser
+python -m pip install --pre yini-parser
 python -c "from yini_parser import load; print(load('config.yini'))"
 ```
 
 ### Node.js / TypeScript
 
-To use YINI in your application, install the Node.js / TypeScript parser:
+Requires Node.js 20 or later. To use YINI in your application, install the Node.js / TypeScript parser:
 
 ```bash
 npm install yini-parser
@@ -160,7 +162,9 @@ If you write or maintain configuration that people edit by hand, YINI may be use
 
 ## Project status
 
-The [YINI specification](https://yini-lang.org/refs/specification/?utm_source=github&utm_campaign=yini_page&utm_content=readme&utm_medium=referral) is at `1.0.0-RC.6`; the final `1.0.0` format release is still ahead. The TypeScript parser and CLI are available, the Python parser is in beta, and the Go parser is in alpha. YINI is best suited to experimentation and controlled projects for now. Check each tool's release notes and test it against your needs before adopting it.
+The [YINI specification](https://yini-lang.org/refs/specification/?utm_source=github&utm_campaign=yini_page&utm_content=readme&utm_medium=referral) is at `1.0.0-RC.7`, released on November 14, 2026; the final `1.0.0` format release is still ahead. See the [RC7 release notes](https://github.com/YINI-lang/YINI-spec/releases/tag/v1.0.0-rc.7).
+
+The TypeScript parser and CLI are available, the Python parser is a release candidate, and the Go parser is in alpha. YINI is best suited to experimentation and controlled projects for now. Check each tool's release notes for specification support and test it against your needs before adopting it.
 
 ## Main repositories
 
