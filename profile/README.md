@@ -54,7 +54,7 @@ npm install yini-parser
 
 See the [parser documentation](https://yini-lang.org/tools/yini-parser-ts/?utm_source=github&utm_campaign=yini_page&utm_content=readme&utm_medium=referral) for usage examples.
 
-For a walkthrough, see the [Getting Started](https://yini-lang.org/use-yini/get-started/?utm_source=github&utm_campaign=yini_page&utm_content=readme_try&utm_medium=referral) guide. Go users can start with [yini-parser-go](https://github.com/YINI-lang/yini-parser-go) (alpha).
+For a walkthrough, see the [Getting Started](https://yini-lang.org/use-yini/get-started/?utm_source=github&utm_campaign=yini_page&utm_content=readme_try&utm_medium=referral) guide. Go users can start with [yini-parser-go](https://github.com/YINI-lang/yini-parser-go) (beta).
 
 <details>
 <summary>Compare the example with JSON, YAML, TOML, XML, and INI</summary>
@@ -164,7 +164,7 @@ If you write or maintain configuration that people edit by hand, YINI may be use
 
 The [YINI specification](https://yini-lang.org/refs/specification/?utm_source=github&utm_campaign=yini_page&utm_content=readme&utm_medium=referral) is at `1.0.0-RC.7`, released on November 14, 2026; the final `1.0.0` format release is still ahead. See the [RC7 release notes](https://github.com/YINI-lang/YINI-spec/releases/tag/v1.0.0-rc.7).
 
-The TypeScript parser and CLI are available, the Python parser is a release candidate, and the Go parser is in alpha. YINI is best suited to experimentation and controlled projects for now. Check each tool's release notes for specification support and test it against your needs before adopting it.
+The TypeScript parser and CLI are available, the Python parser is a release candidate, and the Go parser is in beta. YINI is best suited to experimentation and controlled projects for now. Check each tool's release notes for specification support and test it against your needs before adopting it.
 
 ## Main repositories
 
@@ -172,7 +172,7 @@ The TypeScript parser and CLI are available, the Python parser is a release cand
 * **[yini-test-suite](https://github.com/YINI-lang/yini-test-suite)** — shared parser test suite for validating YINI parser implementations.
 * **[yini-parser-typescript](https://github.com/YINI-lang/yini-parser-typescript)** — official Node.js / TypeScript parser implementation.
 * **[yini-parser-python](https://github.com/YINI-lang/yini-parser-python)** — official Python parser implementation.
-* **[yini-parser-go](https://github.com/YINI-lang/yini-parser-go)** — official Go parser implementation (alpha).
+* **[yini-parser-go](https://github.com/YINI-lang/yini-parser-go)** — official Go parser implementation (beta).
 * **[yini-cli](https://github.com/YINI-lang/yini-cli)** — command-line tooling for validating and working with YINI files.
 * **[yini-demo-apps](https://github.com/YINI-lang/yini-demo-apps)** — small demo applications showing how YINI can be used in real projects.
 * **[syntax-highlighting](https://github.com/YINI-lang/syntax-highlighting)** — syntax highlighting definitions for editors that support TextMate grammars.
