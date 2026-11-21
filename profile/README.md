@@ -7,18 +7,18 @@ YINI aims to be less verbose than JSON and XML, simpler than YAML, more expressi
 ```ini
 @yini
 
-^ Application
-name    = 'Demo Application'
-version = '1.0.0'
-debug   = YES              // true works too
+^ App
+name    = "Nebula"
+isDebug = false
+logPath = "./logs/nebula.log"
 
-^^ Server
-host = 'localhost'
-port = 8080
+^^ Features // Sub-section of App
+list = ["search", "dark-mode"]
 
-^^^ Logging
-level = 'info'
-file  = './app.log'
+^ Server
+host   = "0.0.0.0"
+port   = 8080
+limits = { rpm: 1200, burst: 60 }  // An inline object
 ```
 
 In this example, section headers use `^`; repeating it sets the nesting level (`^` is top-level, `^^` is a child, and `^^^` is a grandchild). Indentation is optional and does not affect the structure. The example uses lenient mode (the default). Strict mode also requires a final `/END` terminator.
