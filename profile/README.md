@@ -54,7 +54,17 @@ npm install yini-parser
 
 See the [parser documentation](https://yini-lang.org/tools/yini-parser-ts/?utm_source=github&utm_campaign=yini_page&utm_content=readme&utm_medium=referral) for usage examples.
 
-For a walkthrough, see the [Getting Started](https://yini-lang.org/use-yini/get-started/?utm_source=github&utm_campaign=yini_page&utm_content=readme_try&utm_medium=referral) guide. Go users can start with [yini-parser-go](https://github.com/YINI-lang/yini-parser-go) (beta).
+### Go
+
+Requires Go 1.22 or later. In your Go module, install the Go parser (beta):
+
+```bash
+go get github.com/YINI-lang/yini-parser-go@latest
+```
+
+See the [Go parser documentation](https://github.com/YINI-lang/yini-parser-go) for usage examples.
+
+For a walkthrough, see the [Getting Started](https://yini-lang.org/use-yini/get-started/?utm_source=github&utm_campaign=yini_page&utm_content=readme_try&utm_medium=referral) guide.
 
 <details>
 <summary>Compare the example with JSON, YAML, TOML, XML, and INI</summary>
