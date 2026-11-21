@@ -21,7 +21,7 @@ port   = 8080
 limits = { rpm: 1200, burst: 60 }  // An inline object
 ```
 
-In this example, section headers use `^`; repeating it sets the nesting level (`^` is top-level, `^^` is a child, and `^^^` is a grandchild). Indentation is optional and does not affect the structure. The example uses lenient mode (the default). Strict mode also requires a final `/END` terminator.
+Here, `^ App` and `^ Server` start top-level sections. `^^ Features` starts a section inside `App`. The number of `^` characters sets the nesting level, so indentation is optional and does not affect the structure. The example uses lenient mode (the default). In strict mode, add `/END` at the end of the file.
 
 ## Try it now
 
