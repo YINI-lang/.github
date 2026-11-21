@@ -66,6 +66,8 @@ See the [Go parser documentation](https://github.com/YINI-lang/yini-parser-go) f
 
 For a walkthrough, see the [Getting Started](https://yini-lang.org/use-yini/get-started/?utm_source=github&utm_campaign=yini_page&utm_content=readme_try&utm_medium=referral) guide.
 
+## Comparisons
+
 <details>
 <summary>Compare the example with JSON, YAML, TOML, XML, and INI</summary>
 
