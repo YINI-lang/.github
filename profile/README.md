@@ -187,7 +187,7 @@ The TypeScript parser and CLI are available, the Python parser is a release cand
 * **[yini-parser-go](https://github.com/YINI-lang/yini-parser-go)** — official Go parser implementation (beta).
 * **[yini-cli](https://github.com/YINI-lang/yini-cli)** — command-line tooling for validating and working with YINI files.
 * **[yini-demo-apps](https://github.com/YINI-lang/yini-demo-apps)** — small demo applications showing how YINI can be used in real projects.
-* **[syntax-highlighting](https://github.com/YINI-lang/syntax-highlighting)** — syntax highlighting definitions for editors that support TextMate grammars.
+* **[yini-syntax-highlighting](https://github.com/YINI-lang/yini-syntax-highlighting)** — syntax highlighting definitions for editors that support TextMate grammars.
 * **[yini-homepage](https://github.com/YINI-lang/yini-homepage)** — homepage and documentation site for YINI.
 
 For documentation and examples, visit [yini-lang.org](https://yini-lang.org/?utm_source=github&utm_campaign=yini_page&utm_content=readme&utm_medium=referral). See also [third-party and other YINI tools](https://github.com/YINI-lang/YINI-spec/wiki/Get-YINI-Tools).
@@ -226,7 +226,7 @@ Licenses vary by repository. See each repository’s `LICENSE` file for the appl
 | yini-parser-go         | MIT License |
 | yini-cli               | Apache License 2.0 |
 | yini-demo-apps         | MIT License |
-| syntax-highlighting    | MIT License |
+| yini-syntax-highlighting | MIT License |
 | yini-homepage          | MIT License |
 
 </details>
